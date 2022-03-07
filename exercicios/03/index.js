@@ -34,7 +34,7 @@ const pessoa = {
 
       return nome
     })
-
+    
     const nomesAjustados = nomesAjustadosRepetidos.filter((nome) => {
       const nomesArray = nome.split(' ')
 
@@ -51,7 +51,7 @@ const pessoa = {
 
     console.log(nomesAjustados)
 
-    const ultimoNome = nomesAjustados[nomes.length - 1]
+    const ultimoNome = nomesAjustados[nomesAjustados.length - 1]
     return ultimoNome
   }
 }
