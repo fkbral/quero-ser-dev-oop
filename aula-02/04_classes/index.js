@@ -13,6 +13,10 @@
       return this.nomeCompleto.split(" ")[0]
     }
 
+    get nomeDeUsuario() {
+      return this.email.split("@")[0]
+    }
+
     cumprimenta() {
       return 'Olá ' + this.primeiroNome
     }
@@ -22,10 +26,16 @@
   const pessoa2 = new Pessoa("Ciclana de Souza", "ciclana__yy@outook.com")
   const pessoa3 = new Pessoa("Zé de Souza")
   
-  console.log(pessoa1)
-  console.log(pessoa1.primeiroNome)
-  console.log(pessoa2)
-  console.log(pessoa2.primeiroNome)
-  console.log(pessoa1.cumprimenta())
-  console.log(pessoa2.cumprimenta())
-  console.log(pessoa3)
+  // console.log(pessoa1)
+  // console.log(pessoa1.primeiroNome)
+  // console.log(pessoa2)
+  // console.log(pessoa2.primeiroNome)
+  // console.log(pessoa1.cumprimenta())
+  // console.log(pessoa2.cumprimenta())
+  // console.log(pessoa3)
+
+  console.log(pessoa1.nomeDeUsuario)
+  pessoa1.nomeDeUsuario = "ciclana345"
+  console.log(pessoa1.nomeDeUsuario)
+  pessoa1.email = "ciclanasilva345@gmail.com"
+  console.log(pessoa1.nomeDeUsuario)
