@@ -13,19 +13,21 @@
 //     return this.nomeCompleto.split(" ")[0]
 //   }
 // }
-
-const pessoa1 = constroiPessoa("Fulana da Silva", "fulanasilva345@gmail.com")
-const pessoa2 = constroiPessoa("Ciclana de Souza", "ciclana__yy@outook.com")
-
 function constroiPessoa(nomeCompleto, email) {
   return {
     nomeCompleto,
     email,
     get primeiroNome() {
       return this.nomeCompleto.split(" ")[0]
+    },
+    cumprimenta() {
+      console.log('olá ' + this.nome)
     }
   }
 }
+
+const pessoa1 = constroiPessoa("Fulana da Silva", "fulanasilva345@gmail.com")
+const pessoa2 = constroiPessoa("Ciclana de Souza", "ciclana__yy@outook.com")
 
 console.log(pessoa1)
 console.log(pessoa2)
