@@ -18,18 +18,32 @@ class Carro {
 
   #validaMarca(novaMarca) {
     const marcaAtualOuPadrao = 
-    this.#marcasDisponiveis.includes(this.#marca) ? this.#marca : "Honda"
+    this.#marcasDisponiveis.includes(this.#marca) 
+    ? this.#marca 
+    : "Honda"
 
-    return this.#marcasDisponiveis.includes(novaMarca) ? novaMarca : marcaAtualOuPadrao
+    // if(marcaAtualOuPadrao === "Não disponível") {
+    //   throw new Error("erro na declaracao")
+    // }
+
+    return ( 
+    this.#marcasDisponiveis.includes(novaMarca) 
+    ? novaMarca 
+    : marcaAtualOuPadrao
+    )
   }
 }
 
-const carro1 = new Carro("KIA", "Ka")
+const carro1 = new Carro("KIA", "Ka") // instaciando novo objeto da Classe Carro
+const hondaCivic = new Carro("Honda", "Civic")
 console.log(carro1.marca)
 
 carro1.marca = "Ford"
+// carro1.modelo = "Fiesta"
 console.log(carro1.marca)
 
 carro1.marca = "Subaru"
 console.log(carro1.marca)
 console.log(carro1)
+
+console.log(hondaCivic)
