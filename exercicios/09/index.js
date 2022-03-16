@@ -1,7 +1,7 @@
 class Veiculo {
   constructor(rodas, usaCombustivel) {
-    this.rodas = rodas
-    this.usaCombustivel = usaCombustivel
+    this.rodas = rodas >= 1 ? rodas : 1
+    this.usaCombustivel = typeof usaCombustivel === "boolean" ? usaCombustivel : false 
   }
 }
 
