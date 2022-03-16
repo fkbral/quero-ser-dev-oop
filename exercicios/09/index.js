@@ -6,11 +6,14 @@ class Veiculo {
 }
 
 class Carro extends Veiculo {
+  #tipoDecombustivelValidos
+
   constructor(rodas, usaCombustivel, tipoDecombustivel) {
-    const tipoDecombustivelValidos = ['gasolina', 'álcool', 'flex']
+    this.#tipoDecombustivelValidos = ['gasolina', 'álcool', 'flex']
+
     super(rodas, usaCombustivel)
     this.tipoDecombustivel = 
-      tipoDecombustivelValidos.includes(tipoDecombustivel)
+      this.#tipoDecombustivelValidos.includes(tipoDecombustivel)
       ? tipoDecombustivel
       : 'gasolina'
   }
