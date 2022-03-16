@@ -5,6 +5,13 @@ class Veiculo {
   }
 }
 
-const veiculoGenerico = new Veiculo(1, false)
+class Carro extends Veiculo {
+  constructor(rodas, usaCombustivel, tipoDecombustivel) {
+    super(rodas, usaCombustivel)
+    this.tipoDecombustivel = tipoDecombustivel
+  }
+}
+
+const veiculoGenerico = new Veiculo(-10, 3)
 
 console.log(veiculoGenerico)
